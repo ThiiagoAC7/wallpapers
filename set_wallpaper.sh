@@ -26,12 +26,14 @@ if [ -n "$WALLPAPER_PATH" ] && [ -f "$WALLPAPER_PATH" ]; then
     set_wallpaper "$WALLPAPER_PATH"
 else
     echo "Setting random wallpaper..."
-    WALLPAPER_DARK="$PWD/dark"
-    WALLPAPER_GRUV="$PWD/gruvbox"
     WALLPAPER_BLUE="$PWD/blue_purple"
+    WALLPAPER_DARK="$PWD/dark"
+    WALLPAPER_DARK_SOULS="$PWD/dark_souls"
+    WALLPAPER_GRUV="$PWD/gruvbox"
+    WALLPAPER_RED_PINK="$PWD/red_pink"
 
     # get all images under wallpaper dir
-    IMAGES=("$WALLPAPER_DARK"/* "$WALLPAPER_GRUV"/* "$WALLPAPER_BLUE"/*)
+    IMAGES=("$WALLPAPER_DARK"/* "$WALLPAPER_GRUV"/* "$WALLPAPER_BLUE"/* "$WALLPAPER_DARK_SOULS"/* "$WALLPAPER_RED_PINK"/*)
 
     RANDOM_IMAGE="${IMAGES[RANDOM % ${#IMAGES[@]}]}"
     set_wallpaper "$RANDOM_IMAGE"
